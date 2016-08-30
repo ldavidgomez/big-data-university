@@ -25,6 +25,7 @@ object DataFrameWithCsv {
         .option("header", "true") // Use first line of all files as header
         .option("inferSchema", "true") // Automatically infer data types
         .load("data/airline-flights/carriers.csv")
+      //.load("data/airline-flights/airports.csv")
 
       df.printSchema()
       df.show()
