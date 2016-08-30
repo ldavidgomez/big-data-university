@@ -51,3 +51,4 @@ project/plugins/project/
 
 #Project
 output/
+metastore_db/
