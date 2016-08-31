@@ -1,10 +1,8 @@
 package module4
 
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.streaming.StreamingContext
-import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.dstream.DStream
-import org.apache.spark.streaming.Seconds
+import org.apache.spark.{SparkConf, SparkContext}
 
 /**
  * Demonstration of Spark Streaming. Random numbers written on a socket
@@ -84,8 +82,8 @@ object Streams {
           th)
     }
 
-  import java.net.{Socket, ServerSocket}
   import java.io.PrintWriter
+  import java.net.{ServerSocket, Socket}
 
   def makeRunnable(port: Int) = new Runnable {
     def run() = {
