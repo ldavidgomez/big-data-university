@@ -12,7 +12,9 @@ object Rating {
   //format is: userId, movieId, rating, timestamp
   def parseRating(str: String): Rating = {
     val fields = str.split("::")
-    Rating(fields(0).toInt, fields(1).toInt, fields(2).toDouble) //we don't care about the timestamp
+
+    //we don't care about the timestamp
+    Rating(fields(0).toInt, fields(1).toInt, fields(2).toDouble)
   }
 }
 
